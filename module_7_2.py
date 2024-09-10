@@ -3,12 +3,12 @@ def custom_write(file_name, strings):
     string_num = 0
     for string in strings:
         string_num += 1
-        file = open(file_name, 'a+', encoding='utf-8')
+        file = open(file_name, 'a', encoding='utf-8')
         ft = file.tell()
-        file.write(f'\n {string}')
+        file.write(f'\n{string}')
         file.close()
         file = open(file_name, 'r', encoding='utf-8')
-        file.seek(ft)
+        file.seek(ft+2)
         strings_positions[(string_num, ft)] = f'{file.read()}'
 
     return strings_positions

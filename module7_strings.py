@@ -9,7 +9,7 @@ time_avg = 45.2
 challenge_result = 'Победа команды Волшебники данных!'
 
 
-# Использование %: {'team1_num': team1_num, 'name_team1': 'Мастер кода'}
+# Использование %:
 print("В команде %s: '%x участников!'" % ('Мастер кода',team1_num))
 print('Итого сегодня в командах участников: "%(team1_num)x и %(team2_num)x".' % {'team1_num': team1_num, 'team2_num': team2_num})
 

@@ -9,9 +9,9 @@ time_avg = 45.2
 challenge_result = 'Победа команды Волшебники данных!'
 
 
-# Использование %:
-print("В команде %(name_team1)s: '%(team1_num)x участников!'" % {'team1_num': 5, 'name_team1': 'Мастер кода'})
-print('Итого сегодня в командах участников: "%(team1_num)x и %(team2_num)x".' % {'team1_num': 5, 'team2_num': 6})
+# Использование %: {'team1_num': team1_num, 'name_team1': 'Мастер кода'}
+print("В команде %s: '%x участников!'" % ('Мастер кода',team1_num))
+print('Итого сегодня в командах участников: "%(team1_num)x и %(team2_num)x".' % {'team1_num': team1_num, 'team2_num': team2_num})
 
 # Использование format():
 print("Команда {name_team2} решила задач: '{0}'!".format(score_2, name_team2='Волшебники данных'))

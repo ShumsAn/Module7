@@ -4,12 +4,17 @@ def custom_write(file_name, strings):
     for string in strings:
         string_num += 1
         file = open(file_name, 'a', encoding='utf-8')
-        ft = file.tell()
-        file.write(f'\n{string}')
-        file.close()
-        file = open(file_name, 'r', encoding='utf-8')
-        file.seek(ft+2)
-        strings_positions[(string_num, ft)] = f'{file.read()}'
+        if string_num == 1:
+            ft = file.tell()
+            file.write(f'{string}')
+            file.close()
+        else:
+            file.write(f'\n{string}')
+            ft = file.tell()
+            ft = file.seek(ft+2)
+            file.close()
+
+        strings_positions[(string_num, ft)] = f'{string}'
 
     return strings_positions
 
